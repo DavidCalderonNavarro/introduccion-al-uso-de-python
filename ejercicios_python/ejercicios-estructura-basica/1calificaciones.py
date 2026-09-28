@@ -10,3 +10,15 @@ elif nota < 5 and nota > 0:
     print("Suspenso")
 else:
     print("Error")
+    
+match nota:
+    case 10 | 9:
+        print("Sobresaliente")
+    case 8 | 7:
+        print("Notable")
+    case 6 | 5:
+        print("Aprobado")
+    case nota if nota < 5 and nota > 0:
+        print("Suspenso")
+    case _:
+        print("Error")
