@@ -1,5 +1,7 @@
 nota = int(input("Dime tu nota: "))
 
+# Con if:
+
 if nota == 10 or nota == 9:
     print("Sobresaliente")
 elif nota == 8 or nota == 7:
@@ -11,6 +13,8 @@ elif nota < 5 and nota > 0:
 else:
     print("Error")
     
+# Con match:
+
 match nota:
     case 10 | 9:
         print("Sobresaliente")
