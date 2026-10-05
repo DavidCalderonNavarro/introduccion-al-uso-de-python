@@ -8,7 +8,7 @@ elif nota == 8 or nota == 7:
     print("Notable")
 elif nota == 6 or nota == 5:
     print("Aprobado")
-elif nota < 5 and nota > 0:
+elif nota < 5 and nota >= 0:
     print("Suspenso")
 else:
     print("Error")
@@ -22,7 +22,7 @@ match nota:
         print("Notable")
     case 6 | 5:
         print("Aprobado")
-    case nota if nota < 5 and nota > 0:
+    case nota if nota < 5 and nota >= 0:
         print("Suspenso")
     case _:
         print("Error")
