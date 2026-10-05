@@ -1,8 +1,5 @@
 numero1 = int(input("Dime un numero: "))
-numero2 = int(input("Dime otro numero: "))
-
-
-
+numero2 = int(input("Dime otro numero: ")) + 1
 
 for i in range(numero1, numero2, +1):
 
