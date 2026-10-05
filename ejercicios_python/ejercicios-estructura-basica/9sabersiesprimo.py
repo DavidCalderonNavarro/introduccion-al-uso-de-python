@@ -1,6 +1,8 @@
 numero = int(input("Dime un numero: "))
 primo = True
 
+limite = int(numero / 2) + 1
+
 if numero >= 2:
 
     for i in range(2, numero, 1):
@@ -17,3 +19,11 @@ if primo == True:
 
 else:
     print("Tu numero no es primo")
+
+for i in range(2, limite):
+    print(numero, "/", i)
+    if numero % i == 0:
+        primo = False
+        break
+
+print(primo)
