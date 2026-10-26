@@ -52,7 +52,7 @@ print(tiroYregate)
 7. Crea una lista de cadenas de texto con la forma "Nombre (Equipo)" para cada jugador. Muéstrala.
 """
 
-listaNombreEquipo = [[jugador["nombre"], jugador["equipo"]] for jugador in jugadores]
+listaNombreEquipo = [jugador["nombre"] + "(" + (jugador["equipo"]) + ")" for jugador in jugadores]
 
 print(listaNombreEquipo)
 
@@ -61,7 +61,7 @@ print(listaNombreEquipo)
 de tiro es mayor o igual a 9, o "Asistente" en caso contrario. Muéstrala.
 """
 
-listaTupla = [(jugador["nombre"] + " Goleador" if jugador["atributos"]["tiro"] >= 9 else jugador["nombre"] + " Asistente") for jugador in jugadores]
+listaTupla = [(jugador["nombre"], " Goleador") if jugador["atributos"]["tiro"] >= 9 else (jugador["nombre"], " Asistente") for jugador in jugadores]
 
 print(listaTupla)
 
