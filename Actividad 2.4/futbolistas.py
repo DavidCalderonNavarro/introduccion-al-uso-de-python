@@ -78,7 +78,7 @@ print(masDe2Filigranas)
 hay duplicadas) y muéstrala.
 """
 
-todasLasFiligranas = [jugador["filigranas"] for jugador in jugadores]
+todasLasFiligranas = [filigrana for jugador in jugadores for filigrana in jugador["filigranas"]]
 
 print(todasLasFiligranas)
 
