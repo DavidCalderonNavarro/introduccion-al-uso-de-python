@@ -80,5 +80,12 @@ hay duplicadas) y muéstrala.
 
 todasLasFiligranas = [filigrana for jugador in jugadores for filigrana in jugador["filigranas"]]
 
+nuevaLista = []
+
+for f in todasLasFiligranas:
+    if f not in nuevaLista:
+        nuevaLista.append(f)
+
 print(todasLasFiligranas)
+print(nuevaLista)
 
