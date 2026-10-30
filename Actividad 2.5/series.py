@@ -47,10 +47,43 @@ print(serie5)
 todas las series.
 """
 
-serie6 = [("La serie " + serie["titulo"] + " tiene " + len(reseña) + " reseñas") for serie in series for reseña in serie["reseñas"]]
+serie6 = [("La serie " + serie["titulo"] + " tiene " + str(len(reseña)) + " reseñas") for serie in series for reseña in serie["reseñas"]]
 
 print(serie6)
 
 """
-7. 
+7. Muestra una lista de tuplas (titulo_serie, comentario) para todas las reseñas que
+hayan dado una puntuación de 10.
 """
+
+serie7 = [(serie["titulo"], reseña["comentario"]) for serie in series for reseña in serie["reseñas"] if reseña["nota"] == 10]
+
+print(serie7)
+
+"""
+8. Muestra una lista de tuplas que incluya el título de la serie y “Obra maestra” si las
+notas medias dadas en las reseñas es igual o superior a 9, y “Gran serie” en caso
+contrario.
+"""
+
+serie8 = [(serie["titulo"] + ": Obra maestra") if sum(reseña["nota"] for reseña in serie["reseñas"]) / len(serie["reseñas"]) >= 9 else (serie["titulo"] + ": Gran serie") for serie in series]
+
+print(serie8)
+
+"""
+9. Muestra una lista con todos los géneros de todas las series. No importa si hay
+géneros duplicados.
+"""
+
+serie9 = [genero for serie in series for genero in serie["generos"]]
+
+print(serie9)
+
+"""
+10. Muestra una lista con todos los nombres de los usuarios que hayan opinado en
+alguna serie de Drama. No importa si hay nombres repetidos.
+"""
+
+serie10 = [reseña["usuario"] for serie in series for reseña in serie["reseñas"] if "Drama" in serie["generos"]]
+
+print(serie10)
